@@ -1,83 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Practica</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-< master
-        <nav>
-            <a herf="#">Inicio</a>
-            <a herf="#">Acerca de</a>
-            <a herf="#">Portafolio</a>
-            <a herf="#">Servicios</a>
-            <a herf="#">Contacto</a>
-        </nav>
-        <section class="textos-header">
-            <img src="https://i.pinimg.com/564x/86/44/d7/8644d73a0d19eedcd72e71424bdf0921.jpg">
-            <h1>Potencia tuss ventas al menos un 200%</h1>
-            <h2>Con una pagina web potente</h2>
-        </section>
-        <div class= "wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.00,49.85 C199.43,182.56 349.20,-49.85 500.00,49.85 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: #08f;"></path></svg></div>
-=======
-        <nav></nav>
-> master
-    </header>
-    <main>
-        <section class="contenedor sobre-nosotros">
-            <h2 class="tutulo">Nuestro producto</h2>
-            <div class="contenedor-sobre-nosotros">
-                <img src="img/letra-e.png" alt="" class="img-about-us">
-
-                <div class="contenido-textos">
-
-                 <h3><span>1</span>Los mejores productos</h3>
-                 <p>Lorem de ipsum monosit amen diu voce popinia toru che tonto el que lo lea.</p>
-                 <h3><span>2</span>Los mejores productos</h3>
-                 <p>Pupinia no piltrafa laba to sum peniques che tonto el que lo lea.</p>
-                </div>
-
-                
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ECOS</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="home_section.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="img_container">
+                <img class="ecosImg" src="img/ECOS_Logo.png">
             </div>
-        </section>
-
-        <section class="portafolio">
-            <div class="contenedor">
-                <h2 class="titulo">portafolio</h2>
-                <div class="galeria-port">
-
-                    <div class="imagen-port">
-                        <img src="img/marketing-digital-para-funeraria.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/farmacia.png" alt="">
-                            <p>Nuestro Trabajo</p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="navbar">
+                <nav class="navbar-links">
+                    <ul class="links">
+                        <li><a class="nav-link" href="#section-about">About</a></li>
+                        <li><a class="nav-link" href="#gallery">Gallery</a></li>
+                        <li><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
+            <div class="icons_media">
+                <svg class="facebook w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                </svg>
+                <svg class="youtube w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
+                </svg>                  
+                <svg class="twitter w-[48px] h-[48px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+        </header>
+        <section class="home">
+            <img class="home_img" src="https://i.pinimg.com/564x/2f/60/2a/2f602a6baba009e7a7de9a5913dfea78.jpg">
         </section>
-
-        
-            <section class="clientes contenedor">
-                <h2 class="titulo">que dicen nuestros clientes</h2>
-                    <div class="cards">
-                       <div class="card">
-                        <img src="img/avatar-de-hombre.png" alt="">
-                        <div class="contenido-texto-card">
-                            <h4>Name</h4>
-                            <p>Dragonite dragonite dragonair dratini tini ini beach ;v;</p>
-                        </div>
-                    </div>
-  
-            </section>
-
+        <main>
+        <section class="nuestro_producto">
+                <h2 class="tutulo">Nuestro producto</h2>
+        </section>
             <section class="about-services"></section>
-    </main>
+        </main>
 
-    <footer>Guanabana</footer>
-</body>
+        <footer>Guanabana</footer>
+    </body>
 </html>
+<!-- TODO "imagen de una seccion" <img src="img/marketing-digital-para-funeraria.jpg" alt=""> -->
+<!-- <img src="img/avatar-de-hombre.png" alt=""> -->
+<!-- TODO "foto hover do muelto pra adicionar novo cara" <img src="img/farmacia.png" alt=""> -->
