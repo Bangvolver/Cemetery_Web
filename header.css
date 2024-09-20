@@ -3,7 +3,6 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    font-family: "Playfair Display", system-ui;
 }
 
 .header{
@@ -15,7 +14,7 @@
     z-index: 2;
     border-bottom: 1px solid rgb(255, 255, 255);
 }
-.img_container{
+.logo_container{
     width: 60px;
     height: 60px;
     margin-left: 1rem;
