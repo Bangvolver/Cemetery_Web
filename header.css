@@ -9,12 +9,12 @@
 .header{
     width: 100%;
     padding: 10px;
-    position: fixed;
+    position: relative;
     display: flex;
     z-index: 1;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    background-color: rgba(79, 68, 11, 0.4);      
+    background-color: rgba(1, 1, 0, 0.6);      
 }
+
 .logo_container{
     height: 3.2rem;
     min-width: 3.2rem;
@@ -26,28 +26,21 @@
 }
 
 .navbar{
-    padding-left: 5rem;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
+    margin: auto;
+    font-size: 1rem;
 }
 
 .links{
     gap: 3rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-right: 0;
 }
 .nav-link{
     color: aliceblue;
 }
 
-.icons_media{
-    gap: 20px;
-    padding-right: 7rem;
-    display: flex;
-    align-items: center;
+.nav-link:hover{
+    opacity: .7;
 }
-.icons_media svg {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-}
-
