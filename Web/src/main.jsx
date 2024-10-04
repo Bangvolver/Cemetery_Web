@@ -9,6 +9,7 @@ createRoot(document.getElementById('root')).render(
     <Button txtButton="minion 1"/>
     <Button txtButton="minion 2"/>
     <Button txtButton="minion 3"/>
+    <Button txtButton="minion 4"/>
   </>
 )
 
