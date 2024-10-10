@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <>
             <NavContainer>
-                <h2 className='EcosTitle'>ECOS</h2>
+                <Link to={"/home"} className='EcosTitle'>ECOS</Link>
                 <nav className='NavLinks'>
                     <li><Link to={"/about"} className='links'>About</Link></li>
                     <li><Link to={"/Gallery"} className='links'>Gallery</Link></li>
@@ -28,7 +28,9 @@ export default Navbar
 const NavContainer = styled.nav`
     .EcosTitle{
         margin: 15px;
-        color: aliceblue;
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #ffffff;
     }
     .NavLinks{
         display: flex;
