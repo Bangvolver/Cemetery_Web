@@ -8,7 +8,7 @@ accesibles en nuestra web, para que familiares y amigos puedan recordar y honrar
 
 Instalación 🛠️
 
-git clone https://github.com/Jerimonski/Cemetery_Web/tree/master
+git clone [https://github.com/Jerimonski/Cemetery_Web/tree/master](https://github.com/Jerimonski/Cemetery_Web.git)
 
 Créditos 👏
 
