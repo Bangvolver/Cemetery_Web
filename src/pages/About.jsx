@@ -64,7 +64,7 @@ function About() {
         </SectionAbout>
     )
 }
-
+ 
 export default About
 
 const SectionAbout = styled.section`
@@ -91,7 +91,6 @@ const SectionAbout = styled.section`
     .ExplainAbout{
         height: auto;
         width: 100%;
-        padding: 4rem 0;
         background-color: rgb(254, 249, 195);
     }
     .MainAbout{
@@ -109,7 +108,7 @@ const SectionAbout = styled.section`
             flex-direction: column;
             text-align: left;
             font-size: 1.2rem;
-            margin-bottom: 20px;
+            margin: 0 0 20px 0;
             span{
                 font-size: 2rem;
                 margin-bottom: 20px;
@@ -122,24 +121,22 @@ const SectionAbout = styled.section`
         }
     }
     .ServicesEcos{
-        height: 150px;
+        height: auto;
         width: 100%;
         display: flex;
-        gap: 280px;
+        gap: 50px;
+        padding: 4rem 0;
+        flex-wrap: wrap;
         justify-content: center;
         background-color: rgb(254, 249, 195);
     }
     .icons{
         display: flex;
         flex-direction: row;
-
         p{
             width: 200px;
             margin-left: 2rem;
             color: rgb(133, 77, 14);
         }
     }
-    width: 100%;
-    height: auto;
-    color: RGB(254, 249, 195);
 `
