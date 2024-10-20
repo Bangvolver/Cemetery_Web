@@ -21,7 +21,7 @@ export default Home
 
 const SectionHome = styled.section`
     .diving {
-        width: 100%;
+        width: 100vw;
         display: flex;
         justify-content: center;
         height: auto;
@@ -69,6 +69,10 @@ const SectionHome = styled.section`
         width: auto;
         }
     }
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 `
 
 
