@@ -48,6 +48,11 @@ function SectionPrices() {
  //aqui fiera de funcion puede Js. (Arriba como abajo)
 
 export default SectionPrices
-const SectionPricesContainer = styled.sectionprices ` // FooterCointer = FootercContainer(RED inside return) & de aqui pa bajo CSS
-
+const SectionPricesContainer = styled.sectionprices `// FooterCointer = FootercContainer(RED inside return) & de aqui pa bajo CSS
+.tablaP{
+    font-size: 32px;
+    padding-bottom: 4rem;
+    text-align: center;
+    color: RGB(133, 77, 14);
+}
 `
