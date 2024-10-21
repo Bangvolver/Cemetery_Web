@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import styled from 'styled-components'
-
 function Home() {
     return (
         <SectionHome>
@@ -73,6 +72,8 @@ const SectionHome = styled.section`
     width: 100%;
     height: auto;
     overflow: hidden;
+
+    width: 100%;
 `
 
 
