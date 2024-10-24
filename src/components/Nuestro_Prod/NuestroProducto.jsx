@@ -1,4 +1,5 @@
-
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 import styled from 'styled-components' 
 
 function Nuestro_Producto() {
@@ -9,7 +10,7 @@ function Nuestro_Producto() {
                 <div className="cont">
                     <div className="containerProducto">
                         <figure className="imgContainer">
-                            <img src="./img/homeSection.png" alt="muerte ciclica" className="imgProducto" />
+                            <img src="https://66fac3c061f8bb073b2c36a8--velvety-clafoutis-9dbb99.netlify.app/img/homeSection.png" alt="muerte ciclica" className="imgProducto" />
                         </figure>
                         <p>En ECOS, brindamos servicios funerarios completos, desde
                             la organización de ceremonias y gestión de cementerios
@@ -17,19 +18,17 @@ function Nuestro_Producto() {
                             digna y respetuosa. Además, contamos con una plataforma
                             digital donde almacenamos de forma segura los datos y biografías
                             de los difuntos, accesibles en nuestra web para que familiares y
-                            amigos puedan recordar y honrar su memoria desde cualquier lugar.</p>
+                            amigos puedan recordar y honrar su memoria desde cualquier lugar.
+                        </p>
                     </div>
                 </div>
             </section> 
-        </Nuestro_ProductoContainer> //dentro del FooterContainer podes escribir Html.
+        </Nuestro_ProductoContainer>
     )
-
 }
 
- //aqui fiera de funcion puede Js. (Arriba como abajo)
-
 export default Nuestro_Producto
-const Nuestro_ProductoContainer = styled.nuestro_producto `
+const Nuestro_ProductoContainer = styled.section `
 .nuestro_producto{
     height: auto;
     width: 100%;
@@ -47,7 +46,7 @@ const Nuestro_ProductoContainer = styled.nuestro_producto `
 }
 
 .SectionTitle{
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     font-size: 32px;
 }
 
@@ -56,15 +55,15 @@ const Nuestro_ProductoContainer = styled.nuestro_producto `
     width: auto;
     text-align: left;
     background-color: RGB(254, 249, 195);
+    p{
+        max-width: 450px;
+        max-height: 500px;
+        padding: 0 0 2rem 0rem;
+        color: RGB(133, 77, 14);
+        margin: auto;
+    }
 }
 
-.containerProducto p{
-    max-width: 350px;
-    max-height: 500px;
-    padding: 2rem 0rem;
-    color: RGB(133, 77, 14);
-    margin: auto;
-}
 
 .imgContainer{
     max-width: 40rem;
