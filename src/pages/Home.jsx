@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import styled from 'styled-components'
-import NuestroProducto from './../components/Nuestro_Prod/NuestroProducto'
-import SectionPrices from '../components/Section_Prices/SectionPrices'
-import Form from '../components/Form/Form'
+import NuestroProducto from './../components/Secciones/Nuestro_Prod/NuestroProducto'
+import SectionPrices from '../components/Secciones/Section_Prices/SectionPrices'
+import Form from '../components/Secciones/Form/Form'
 
 function Home() {
     return (

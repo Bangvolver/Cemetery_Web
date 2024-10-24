@@ -10,16 +10,16 @@ function Navbar() {
             <NavContainer>
                 <Link to={"/home"} className='EcosTitle'>ECOS</Link>
                 <nav className='NavLinks'>
-                    <li><Link to={"/about"} className='links'>About</Link></li>
-                    <li><Link to={"/Gallery"} className='links'>Gallery</Link></li>
-                    <li><Link to={"/Contacts"} className='links'>Contacts</Link></li>
+                    <li><Link to={"/about"} className='links'>Nosotros</Link></li>
+                    <li><Link to={"/Gallery"} className='links'>Galeria</Link></li>
+                    <li><Link to={"/Contacts"} className='links'>Contactanos</Link></li>
                 </nav>
                 <div className='Buttons'>
                     <button className='Btns' onClick={OnClickAlert}>Login</button>
                     <button className='Btns RegisterBtn' onClick={OnClickAlert}>Register</button>
                 </div>
             </NavContainer>
-    </>
+        </>
     )
 }
 

@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
+import CartelPrincipal from '../components/CartelDePagina/CartelPrincipal'
 
 function Contact() {
-    console.log('qwdqwdqwd')
     return (
-        <div>ASEREJE</div>
+        <CartelPrincipal text="Contactanos" />
     )
 }
 

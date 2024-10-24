@@ -1,18 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import { styled } from 'styled-components';
-import Icons from './../components/ServicesIconsSvg/ServicesIcons';
-import ProfilesImagenes from './../components/ProfilesImg/ProfilesImagenes';
+import { styled } from 'styled-components'
+import Icons from './../components/ServicesIconsSvg/ServicesIcons'
+import ProfilesImagenes from './../components/ProfilesImg/ProfilesImagenes'
+import CartelPrincipal from '../components/CartelDePagina/CartelPrincipal'
 
 function About() {
     return (
         <SectionAbout>
-            <div className='FirstViewAbout'>
-                <img className='CemeteryImg' src="https://wallpapers.com/images/featured/imagenes-sky-hd-ivxyvj6v4e70wio1.jpg" alt="" />
-                <div className='TxtAboutContainer'>
-                    About Us
-                </div>
-            </div>
+            <CartelPrincipal text="Sobre Nosotros" />
             <section className='ExplainAbout'>
                 <div className='MainAbout'>
                     <p>
@@ -86,26 +82,6 @@ function About() {
 export default About
 
 const SectionAbout = styled.section`
-    .FirstViewAbout{
-        width: 100%;
-        height: 250px;
-        position: relative;
-    }
-    .CemeteryImg{
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        filter: brightness(40%);
-    }
-    .TxtAboutContainer {
-        font-size: 4rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        color: rgb(255, 255, 255);
-    }
     .ExplainAbout{
         height: auto;
         width: 100%;
