@@ -6,7 +6,7 @@ import Icons from '../ServicesIconsSvg/ServicesIcons';
 function Footer() {
     return (
         <FooterContainer> 
-            <footer className="footer1">
+            <footer className="footer">
                 <ul className="social_icon">
                     <li><a href="#"><Icons type="facebook"/></a></li>
                     <li><a href="#"><Icons type="twitter"/></a></li>   
@@ -32,60 +32,61 @@ function Footer() {
 
 export default Footer 
 const FooterContainer = styled.footer ` // FooterCointer = FootercContainer(RED inside return) & de aqui pa bajo CSS
-.footer1{
-    position: relative;
-    width: 100%;
-    min-height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: RGB(133, 77, 14);
-}
+    .footer{
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: RGB(133, 77, 14);
+    }
 
-footer .social_icon, footer .menu{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}
+    footer .social_icon, footer .menu{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
 
-footer .social_icon li, footer .menu li{
-    list-style: none;
-}
+    footer .social_icon li, footer .menu li{
+        list-style: none;
+    }
 
-footer .social_icon li a{
-    font-size: 2em;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-}
+    footer .social_icon li a{
+        font-size: 2em;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+    }
 
-footer .social_icon li a:hover{
-    transform: translateY(-10px);
-}
+    footer .social_icon li a:hover{
+        transform: translateY(-10px);
+    }
 
-footer .menu li a{
-    font-size: 1.2em;
-    color: RGB(255, 215, 0);
-    margin: 0 10px;
-    display: inline-block;
-    opacity: 0.75;
-}
+    footer .menu li a{
+        font-size: 1.2em;
+        color: RGB(255, 215, 0);
+        margin: 0 10px;
+        display: inline-block;
+        opacity: 0.75;
+        text-decoration: none;
+    }
 
-footer .menu li a:hover{
-    opacity: 1;
-}
+    footer .menu li a:hover{
+        opacity: 1;
+    }
 
-footer p{
-    color: RGB(254, 249, 195);
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
+    footer p{
+        color: RGB(254, 249, 195);
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
 `

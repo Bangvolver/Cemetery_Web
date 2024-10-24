@@ -2,17 +2,26 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import styled from 'styled-components'
+import NuestroProducto from './../components/Nuestro_Prod/NuestroProducto'
+import SectionPrices from '../components/Section_Prices/SectionPrices'
+import Form from '../components/Form/Form'
+
 function Home() {
     return (
-        <SectionHome>
-            <div className="diving">
-                <img className='homeImg' src="https://png.pngtree.com/background/20230607/original/pngtree-beautiful-day-at-a-graveyard-has-a-beautiful-background-picture-image_2902658.jpg" alt="Imagen de fondo" />
-                <div className="TxtHome">
-                    <h1>ECOS</h1>
-                    <cite>"No se muere quien se va, solo se muere quien se olvida"</cite>
+        <>
+            <SectionHome>
+                <div className="diving">
+                    <img className='homeImg' src="https://png.pngtree.com/background/20230607/original/pngtree-beautiful-day-at-a-graveyard-has-a-beautiful-background-picture-image_2902658.jpg" alt="Imagen de fondo" />
+                    <div className="TxtHome">
+                        <h1>ECOS</h1>
+                        <cite>"No se muere quien se va, solo se muere quien se olvida"</cite>
+                    </div>
                 </div>
-            </div>
-        </SectionHome>
+            </SectionHome>
+            <NuestroProducto />
+            <SectionPrices />
+            <Form />
+        </>
     )
 }
 
