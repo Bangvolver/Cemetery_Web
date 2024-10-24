@@ -1,16 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import styled from 'styled-components' 
+import Icons from '../ServicesIconsSvg/ServicesIcons';
 
 function Footer() {
     return (
         <FooterContainer> 
             <footer className="footer1">
                 <ul className="social_icon">
-                    <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#"><Icons type="facebook"/></a></li>
+                    <li><a href="#"><Icons type="twitter"/></a></li>   
+                    <li><a href="#"><Icons type="linkedin"/></a></li>
+                    <li><a href="#"><Icons type="instagram"/></a></li>
                 </ul>
                 <ul className="menu">
                     <li><a href="">Home</a></li>
@@ -21,11 +22,9 @@ function Footer() {
                 </ul>
                 <p>&copy; 2024 <b>Equipo ECOS</b> | Todos los Derechos Reservados.</p>
             </footer>
-            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-            <script noModule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  
         </FooterContainer> //dentro del FooterContainer podes escribir Html.
-    )
+    );
 
 }
 
