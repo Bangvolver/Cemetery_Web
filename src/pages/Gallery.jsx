@@ -22,12 +22,15 @@ function Gallery() {
         <>
             <GalleryContainer>
                 <CartelPrincipal text="Galería" />  
-                <h2>Una galería conmemorativa que muestra
-                    fotos de personas en vida, acompañadas
-                    de detalles sobre su historia y legado,
-                    ofreciendo un espacio respetuoso para
-                    honrar sus memorias.
-                </h2>
+                <div className="textContainer">
+                    <h2>
+                        Una galería conmemorativa que muestra
+                        fotos de personas en vida, acompañadas
+                        de detalles sobre su historia y legado,
+                        ofreciendo un espacio respetuoso para
+                        honrar sus memorias.
+                    </h2>
+                </div>
             <section className='CardContainer'>
                 {usuarios.slice(0, visibleCount).map((x) => ( 
                     <div key={x.id} className='cards'>
@@ -55,9 +58,14 @@ const GalleryContainer = styled.div`
     padding-bottom: 2rem;
     text-align: center;
     background-color: rgb(202, 138, 4);
+    .textContainer{
+        width: 100%;
+        padding: 1rem;
+        color: rgb(133, 77, 14);
+        background-color: rgb(254, 249, 195);
+    }
     h2{
-        font-size: 1.9rem;
-        color: rgb(254, 249, 195);
+        font-size: 1.4rem;
     }
     img {
         width: 150px;

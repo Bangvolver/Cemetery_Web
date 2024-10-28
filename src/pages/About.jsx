@@ -64,14 +64,14 @@ function About() {
                 <h1>Nuestro equipo</h1>
                 <div className='OurTeamContainer'>
                     <ProfilesImagenes 
-                        LinkImg={"https://cdns-images.dzcdn.net/images/artist/89763ed244635130826aa4ce159826f5/1900x1900-000000-80-0-0.jpg"} 
-                        Nombre={"Jeremynho Deus"} 
-                        Cargo={"Lavaplatos"} 
+                        LinkImg={"https://avatars.githubusercontent.com/u/139189150?v=4"} 
+                        Nombre={"Jeremy Amaru"} 
+                        Cargo={"Desarollador Web"} 
                     />
                     <ProfilesImagenes 
-                        LinkImg={"https://www.pockettactics.com/wp-content/sites/pockettactics/2024/07/Zenless-Zone-Zero-Anby-1.jpg"} 
-                        Nombre={"Shirailinha Kos "} 
-                        Cargo={"Atrapa Ratones"} 
+                        LinkImg={"https://avatars.githubusercontent.com/u/181678595?v=4"} 
+                        Nombre={"Ká Aliaga"} 
+                        Cargo={"Desarollador Web"} 
                     />
                 </div>
             </section>
