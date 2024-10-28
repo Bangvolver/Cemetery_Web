@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
-    const OnClickAlert = () => {alert('AAAAAAAAAAAA')}; // this for navigation in future
+    const OnClickAlert = () => {alert('En Proceso....')}; // this for navigation in future
     return (
         <>
             <NavContainer>
