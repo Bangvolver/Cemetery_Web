@@ -82,7 +82,6 @@ const SectionHome = styled.section`
     height: auto;
     overflow: hidden;
 
-    width: 100%;
 `
 
 

@@ -1,16 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import styled from 'styled-components' 
+import message from "../../../assets/img/message.png.png"//falta img
 
-
-function Footer() {
+function Form() {
     return (
         <FormContainer> 
             <section id="contact" className="section-contact">
                 <div className="contact-container">
                     <h1>Contactanos</h1>
                     <div className="img-contact-container">
-                    
+                    <img className='message1' src={message} alt="" />
                     </div>
                     <form className="form-contact">
                         <div className="form-container">
@@ -33,7 +33,7 @@ function Footer() {
 }
 
 
-export default Footer 
+export default Form 
 const FormContainer = styled.form `
 .section-contact{
     height: auto;
@@ -97,4 +97,10 @@ const FormContainer = styled.form `
     .section-contact h1{
         font-size: 1.5rem;
     }
-} `
+} 
+
+.message1{
+    width: 150px;
+    height: 150px;
+}
+`
