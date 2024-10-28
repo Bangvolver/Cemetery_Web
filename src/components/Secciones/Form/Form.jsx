@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import styled from 'styled-components' 
-import message from "../../../assets/img/message.png.png"//falta img
+import message from "../../../assets/img/message.png"//falta img
 
 function Form() {
     return (
