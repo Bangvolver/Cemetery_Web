@@ -20,8 +20,8 @@ function Gallery() {
 
     return (
         <>
-            <CartelPrincipal text="Galería" />
             <GalleryContainer>
+                <CartelPrincipal text="Galería" />  
                 <h2>Una galería conmemorativa que muestra
                     fotos de personas en vida, acompañadas
                     de detalles sobre su historia y legado,
@@ -52,10 +52,9 @@ export default Gallery;
 
 // Estilos para el contenedor de la galería
 const GalleryContainer = styled.div`
-    height: 100%;
-    padding: 50px;
-    background-color: rgb(202, 138, 4);
+    padding-bottom: 2rem;
     text-align: center;
+    background-color: rgb(202, 138, 4);
     h2{
         font-size: 1.9rem;
         color: rgb(254, 249, 195);
