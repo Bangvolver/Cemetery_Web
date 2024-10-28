@@ -4,41 +4,46 @@ import styled from 'styled-components'
 
 function SectionPrices() {
     return (
-        <SectionPricesContainer> 
-            <h1 className="tablaP">Tabla de Precios</h1>
-            <div className="pricing-table">
-                <h2 className="basico">Básico</h2>
-                <p className="price">$150.00</p>
-                <ul>
-                    <li>Arreglos funerarios</li>
-                    <li>Proceso de cremación</li>
-                    <li className="unavailable">Vestir y cosmetizar</li>
-                    <li className="unavailable">Servicio de vehículo</li>
-                </ul>
-                <button>Contratar ahora</button>
-            </div>
-            <div className="pricing-table">
-                <h2 className="premium">Premium</h2>
-                <p className="price">$300.00</p>
-                <ul>
-                    <li>Arreglos funerarios</li>
-                    <li>Proceso de cremación</li>
-                    <li>Vestir y cosmetizar</li>
-                    <li className="unavailable">Servicio de vehículo</li>
-                </ul>
-                <button>Contratar ahora</button>
-            </div>
-            <div className="pricing-table">
-                <h2 className="ultimate">Ultimate</h2>
-                <p className="price">$500.00</p>
-                <ul>
-                    <li>Arreglos funerarios</li>
-                    <li>Proceso de cremación</li>
-                    <li>Vestir y cosmetizar</li>
-                    <li>Servicio de vehículo</li>
-                </ul>
-                <button>Contratar ahora</button>
-            </div>
+        <SectionPricesContainer>
+            
+            <section className="sectionPrices">
+                <h1 className="tablaP">Tabla de Precios</h1>
+              <div className="PricingContainer">
+                    <div className="pricing-table">
+                        <h2 className="basico">Básico</h2>
+                        <p className="price">$150.00</p>
+                        <ul>
+                            <li>Arreglos funerarios</li>
+                            <li>Proceso de cremación</li>
+                            <li className="unavailable">Vestir y cosmetizar</li>
+                            <li className="unavailable">Servicio de vehículo</li>
+                        </ul>
+                        <button>Contratar ahora</button>
+                    </div>
+                    <div className="pricing-table">
+                        <h2 className="premium">Premium</h2>
+                        <p className="price">$300.00</p>
+                        <ul>
+                            <li>Arreglos funerarios</li>
+                            <li>Proceso de cremación</li>
+                            <li>Vestir y cosmetizar</li>
+                            <li className="unavailable">Servicio de vehículo</li>
+                        </ul>
+                        <button>Contratar ahora</button>
+                    </div>
+                    <div className="pricing-table">
+                        <h2 className="ultimate">Ultimate</h2>
+                        <p className="price">$500.00</p>
+                        <ul>
+                            <li>Arreglos funerarios</li>
+                            <li>Proceso de cremación</li>
+                            <li>Vestir y cosmetizar</li>
+                            <li>Servicio de vehículo</li>
+                        </ul>
+                        <button>Contratar ahora</button>
+                    </div>
+                </div>
+            </section>
         </SectionPricesContainer> //dentro del FooterContainer podes escribir Html.
     )
 
@@ -48,6 +53,8 @@ function SectionPrices() {
 
 export default SectionPrices
 const SectionPricesContainer = styled.section `// FooterCointer = FootercContainer(RED inside return) & de aqui pa bajo CSS
+
+
     .tablaP{
         font-size: 32px;
         padding-bottom: 4rem;

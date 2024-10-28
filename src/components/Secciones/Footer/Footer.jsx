@@ -36,7 +36,7 @@ const FooterContainer = styled.footer ` // FooterCointer = FootercContainer(RED 
         position: relative;
         width: 100%;
         min-height: 100px;
-        padding: 20px 50px;
+        padding: 20px auto;
         display: flex;
         justify-content: center;
         align-items: center;
