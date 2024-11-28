@@ -6,12 +6,15 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Gallery from '../pages/Gallery'
 import Login from '../pages/Login'
+import Register from '../pages/Register'
+
 function Routers() {
     return (
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/home' element={<Home/>} />
             <Route path='/login' element={<Login/>} />
+            <Route path='/register' element={<Register/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/Gallery' element={<Gallery/>} />
             <Route path='/Contacts' element={<Contact/>} />

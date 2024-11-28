@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
-    const OnClickAlert = () => {alert('En Proceso....')}; // this for navigation in future
     return (
         <>
             <NavContainer>
@@ -16,7 +15,7 @@ function Navbar() {
                 </nav>
                 <div className='Buttons'>
                     <button className='Btns'><Link to={"/Login"} className='ButtonTxt'>Login</Link></button>
-                    <button className='Btns RegisterBtn' onClick={OnClickAlert}>Register</button>
+                    <button className='Btns RegisterBtn'><Link to={"/register"} className='ButtonTxt'>Registro</Link></button>
                 </div>
             </NavContainer>
         </>

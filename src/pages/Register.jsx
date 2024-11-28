@@ -2,8 +2,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
-// Iconos personalizados para reemplazar los de lucide-react
+// Iconos personalizados (puedes reutilizar los mismos)
 // eslint-disable-next-line react/prop-types
 const Eye = ({ size = 20 }) => (
   <svg
@@ -47,44 +46,64 @@ const EyeOff = ({ size = 20 }) => (
   </svg>
 )
 
-function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+function Register() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  })
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
 
     try {
-      // Simulating an API call
+      // Simular lógica de validación
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
-      // Check if email and password are valid (replace with your actual logic)
-      if (email === 'user@example.com' && password === 'password') {
-        alert('Inicio de sesión exitoso. Bienvenido de vuelta!')
-        // Aquí redirigirías a una página de dashboard o inicio
-      } else {
-        throw new Error('Credenciales inválidas')
+      if (formData.password !== formData.confirmPassword) {
+        throw new Error('Las contraseñas no coinciden')
       }
-    // eslint-disable-next-line no-unused-vars
+
+      alert('Registro exitoso. ¡Bienvenido a la plataforma!')
+      // Aquí redirigirías a una página de bienvenida o dashboard
     } catch (error) {
-      alert(
-        'Error de inicio de sesión: Email o contraseña inválidos. Por favor, intente de nuevo.'
-      )
+      alert(`Error en el registro: ${error.message}`)
     } finally {
       setIsLoading(false)
     }
   }
 
   return (
-    <LoginSection>
+    <RegisterSection>
       <div className="page-container">
         <div className="form-container">
           <div className="form-header">
-            <h2 className="form-title">Iniciar Sesión</h2>
-            <form onSubmit={handleSubmit} className="login-form">
+            <h2 className="form-title">Registro</h2>
+            <form onSubmit={handleSubmit} className="register-form">
+              <div className="input-group">
+                <label htmlFor="name" className="input-label">
+                  Nombre Completo
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  className="input-field"
+                  placeholder="Juan Pérez"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
               <div className="input-group">
                 <label htmlFor="email" className="input-label">
                   Correo Electrónico
@@ -94,8 +113,9 @@ function Login() {
                   type="email"
                   className="input-field"
                   placeholder="correo@ejemplo.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -109,8 +129,9 @@ function Login() {
                     type={showPassword ? 'text' : 'password'}
                     className="input-field"
                     placeholder="••••••••"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
                     required
                   />
                   <button
@@ -125,170 +146,112 @@ function Login() {
                   </button>
                 </div>
               </div>
+              <div className="input-group">
+                <label htmlFor="confirmPassword" className="input-label">
+                  Confirmar Contraseña
+                </label>
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  className="input-field"
+                  placeholder="••••••••"
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
               <button
                 type="submit"
                 className="submit-button"
                 disabled={isLoading}
               >
-                {isLoading ? (
-                  <span>Iniciando sesión...</span>
-                ) : (
-                  <>
-                    Iniciar Sesión
-                  </>
-                )}
+                {isLoading ? 'Creando cuenta...' : 'Crear Cuenta'}
               </button>
             </form>
           </div>
           <div className="form-footer">
             <p className="footer-text">
-              ¿No tienes una cuenta?{' '}
-              <Link to={"/register"} className='ButtonTxt'>Registro</Link>
+              ¿Ya tienes una cuenta?{' '}
+              <Link to={"/Login"} className='ButtonTxt'>Login</Link>
             </p>
           </div>
         </div>
       </div>
-    </LoginSection>
+    </RegisterSection>
   )
 }
 
-export default Login
+export default Register
 
-const LoginSection = styled.section`
+const RegisterSection = styled.section`
   .page-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background: linear-gradient(to bottom right, #fbffe6, #ffe6b7);
+    background: linear-gradient(to bottom right, #fdfde7, #ffe0b2);
   }
 
   .form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    padding-right: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-
-  .form-header {
-    padding: 1.5rem;
   }
 
   .form-title {
-    font-size: 1.875rem;
-    font-weight: bold;
-    text-align: center;
-    color: #333;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-
-  .error-message {
-    color: red;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
     text-align: center;
-  }
-
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
   }
 
   .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-right: 1rem;
   }
 
   .input-label {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #4B5563;
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 
   .input-field {
     width: 100%;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid #D1D5DB;
-    border-radius: 0.375rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 1rem;
-    transition: border-color 0.15s ease-in-out;
-
-    &:focus {
-      outline: none;
-      border-color: #3B82F6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-    }
-  }
-
-  .password-input-wrapper {
-    position: relative;
-  }
-
-  .password-toggle-button {
-    position: absolute;
-    right: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #6B7280;
-
-    &:hover {
-      color: #4B5563;
-    }
   }
 
   .submit-button {
     width: 100%;
-    padding: 0.625rem 1.25rem;
-    background-color: #3B82F6;
-    color: white;
-    border: none;
-    border-radius: 0.375rem;
+    padding: 0.75rem;
     font-size: 1rem;
-    font-weight: 500;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.15s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      background-color: #2563EB;
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
   }
 
-  .form-footer {
-    padding: 1rem 1.5rem;
-    background-color: #F9FAFB;
-    border-top: 1px solid #E5E7EB;
+  .submit-button:disabled {
+    background: #90caf9;
+    cursor: not-allowed;
   }
 
   .footer-text {
     text-align: center;
-    font-size: 0.875rem;
-    color: #6B7280;
+    font-size: 0.9rem;
+    margin-top: 1rem;
   }
 
   .footer-link {
-    color: #3B82F6;
-    font-weight: 500;
+    color: #007bff;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
-`;
+`
