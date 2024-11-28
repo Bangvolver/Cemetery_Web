@@ -6,11 +6,14 @@ import { BrowserRouter } from 'react-router-dom'
 import React from 'react'
 import './main.css'
 import App from './App'
+import { UserProvider } from '../src/components/usercontent'; 
 
 createRoot(document.getElementById('root')).render(
   <>
     <BrowserRouter>
-      <App/>
+      <UserProvider>
+        <App/>
+      </UserProvider>
     </BrowserRouter>
   </>
 )

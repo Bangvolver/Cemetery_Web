@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import React, { useState, useContext } from 'react';
+import styled from 'styled-components';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserContext } from '../components/usercontent';
 
-// Iconos personalizados para reemplazar los de lucide-react
 // eslint-disable-next-line react/prop-types
 const Eye = ({ size = 20 }) => (
   <svg
@@ -15,18 +15,10 @@ const Eye = ({ size = 20 }) => (
     width={size}
     height={size}
   >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-    />
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.6 1.768-1.582 3.38-2.92 4.59M15 12a9 9 0 01-3 5"
-    />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.6 1.768-1.582 3.38-2.92 4.59M15 12a9 9 0 01-3 5" />
   </svg>
-)
+);
 
 // eslint-disable-next-line react/prop-types
 const EyeOff = ({ size = 20 }) => (
@@ -39,49 +31,44 @@ const EyeOff = ({ size = 20 }) => (
     width={size}
     height={size}
   >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M13.875 18.825A8.962 8.962 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.836 9.836 0 012.162-3.54M3 3l18 18M13.875 5.175A8.96 8.96 0 0112 5c-4.477 0-8.268 2.943-9.542 7a9.835 9.835 0 002.162 3.54M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-    />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13.875 18.825A8.962 8.962 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.836 9.836 0 012.162-3.54M3 3l18 18M13.875 5.175A8.96 8.96 0 0112 5c-4.477 0-8.268 2.943-9.542 7a9.835 9.835 0 002.162 3.54M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
   </svg>
-)
+);
 
 function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { setUser } = useContext(UserContext); 
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
 
     try {
-      // Simulating an API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
-      // Check if email and password are valid (replace with your actual logic)
-      if (email === 'user@example.com' && password === 'password') {
-        alert('Inicio de sesión exitoso. Bienvenido de vuelta!')
-        // Aquí redirigirías a una página de dashboard o inicio
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (email === 'cementerioecos@gmail.com' && password === 'password') {
+        setUser({ email });
+        alert('Inicio de sesión exitoso. Bienvenido EcosFamily!');
+        navigate('/home');
       } else {
-        throw new Error('Credenciales inválidas')
+        throw new Error('Credenciales inválidas');
       }
     // eslint-disable-next-line no-unused-vars
     } catch (error) {
-      alert(
-        'Error de inicio de sesión: Email o contraseña inválidos. Por favor, intente de nuevo.'
-      )
+      alert('Error de inicio de sesión: Email o contraseña inválidos.');
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <LoginSection>
       <div className="page-container">
-        <div className="form-container">
+      <div className="form-container">
           <div className="form-header">
             <h2 className="form-title">Iniciar Sesión</h2>
             <form onSubmit={handleSubmit} className="login-form">
@@ -149,10 +136,11 @@ function Login() {
         </div>
       </div>
     </LoginSection>
-  )
+  );
 }
 
-export default Login
+export default Login;
+
 
 const LoginSection = styled.section`
   .page-container {
