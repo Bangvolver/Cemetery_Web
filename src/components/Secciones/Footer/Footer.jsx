@@ -22,8 +22,7 @@ function Footer() {
                 </ul>
                 <p>&copy; 2024 <b>Equipo ECOS</b> | Todos los Derechos Reservados.</p>
             </footer>
- 
-        </FooterContainer> //dentro del FooterContainer podes escribir Html.
+        </FooterContainer>
     );
 
 }

@@ -15,7 +15,7 @@ function Navbar() {
                     <li><Link to={"/Contacts"} className='links'>Contactanos</Link></li>
                 </nav>
                 <div className='Buttons'>
-                    <button className='Btns' onClick={OnClickAlert}>Login</button>
+                    <button className='Btns'><Link to={"/Login"} className='ButtonTxt'>Login</Link></button>
                     <button className='Btns RegisterBtn' onClick={OnClickAlert}>Register</button>
                 </div>
             </NavContainer>
@@ -26,6 +26,9 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
+    .ButtonTxt{
+        text-decoration: none;
+    }
     .EcosTitle{
         margin: 15px;
         text-decoration: none;
