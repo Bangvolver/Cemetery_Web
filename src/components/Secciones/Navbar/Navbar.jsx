@@ -1,31 +1,43 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { UserContext } from '../../usercontent'
 
 function Navbar() {
-    const OnClickAlert = () => {alert('En Proceso....')}; // this for navigation in future
-    return (
-        <>
-            <NavContainer>
-                <Link to={"/home"} className='EcosTitle'>ECOS</Link>
-                <nav className='NavLinks'>
-                    <li><Link to={"/about"} className='links'>Nosotros</Link></li>
-                    <li><Link to={"/Gallery"} className='links'>Galeria</Link></li>
-                    <li><Link to={"/Contacts"} className='links'>Contactanos</Link></li>
-                </nav>
-                <div className='Buttons'>
-                    <button className='Btns'><Link to={"/Login"} className='ButtonTxt'>Login</Link></button>
-                    <button className='Btns RegisterBtn' onClick={OnClickAlert}>Register</button>
-                </div>
-            </NavContainer>
-        </>
-    )
+  const { user } = useContext(UserContext);
+
+  return (
+    <NavContainer>
+      <Link to={"/home"} className='EcosTitle'>ECOS</Link>
+      <nav className='NavLinks'>
+        <li><Link to={"/about"} className='links'>Nosotros</Link></li>
+        <li><Link to={"/Gallery"} className='links'>Galeria</Link></li>
+        <li><Link to={"/Contacts"} className='links'>Contactanos</Link></li>
+      </nav>
+      <div className='Buttons'>
+        {user ? (
+          <span className="welcome-text">Bienvenido EcosFamily</span>
+        ) : (
+          <>
+            <button className='Btns'><Link to={"/Login"} className='ButtonTxt'>Login</Link></button>
+            <button className='Btns RegisterBtn'><Link to={"/register"} className='ButtonTxt'>Registro</Link></button>
+          </>
+        )}
+      </div>
+    </NavContainer>
+  );
 }
 
-export default Navbar
+export default Navbar;
 
 const NavContainer = styled.nav`
+    .welcome-text{
+        color: rgb(254, 249, 195);
+        padding-right: 1rem;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
     .ButtonTxt{
         text-decoration: none;
     }
