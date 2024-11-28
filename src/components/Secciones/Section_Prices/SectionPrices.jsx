@@ -4,7 +4,6 @@ import styled from 'styled-components'
 function SectionPrices() {
     return (
         <SectionPricesContainer>
-            
             <section className="sectionPrices">
                 <h1 className="tablaP">Tabla de Precios</h1>
               <div className="PricingContainer">
@@ -48,25 +47,19 @@ function SectionPrices() {
 
 }
 
- //aqui fuera de funcion puede Js. (Arriba como abajo)
-
 export default SectionPrices
-const SectionPricesContainer = styled.section `// FooterCointer = FootercContainer(RED inside return) & de aqui pa bajo CSS
-
-
+const SectionPricesContainer = styled.section `
     .tablaP{
         font-size: 32px;
         padding-bottom: 4rem;
         text-align: center;
         color: RGB(133, 77, 14);
     }
-
     .sectionPrices{
         width: 100%;
         padding: 4rem 0rem 10rem 0rem;
         background-color: RGB(254, 240, 138);
     }
-
     .PricingContainer{
         display: flex;
         flex-wrap: wrap;
