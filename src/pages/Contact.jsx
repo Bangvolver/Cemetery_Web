@@ -10,14 +10,14 @@ function Contact() {
                 <CartelPrincipal text="Contactanos" />
                 <h1>Ponte en contacto con nosotros</h1>
                 <div className='iconsContainer'>
-                    <p>We are here to help and answer any question you might have. We look forward to hearing from you.</p>
+                    <p>Estamos aquí para ayudarte y responder cualquier pregunta que puedas tener. Esperamos tener noticias tuyas pronto.</p>
                     <div className='socialIcons'>
                         <Icons type="mail" />
-                        <span>EcosFamily@gmail.com</span>
+                        <span>cementerioecos@gmail.com</span>
                     </div>
                     <div className="socialIcons">
                         <Icons type="phone" />
-                        <span>+569 66666666</span>
+                        <span>+56 9 91827480</span>
                     </div>
                     <div className="socialIcons">
                     <Icons type="location" />
@@ -41,8 +41,8 @@ function Contact() {
                             <input type="email" placeholder='QinShiHuang@hotmail.com' required />
                         </label>
                         <label htmlFor="" >
-                            Email
-                            <input type="number" placeholder='+569 66666666' required />
+                            Numero
+                            <input type="number" placeholder='+569 91827480' required />
                         </label>
                     </div>
                         <label htmlFor="" className='feedback'>
@@ -87,48 +87,140 @@ const FormContainer = styled.div`
     h1{
         text-align: center;
     }
-    .iconsContainer{
-        width: 100%;
-        padding: 1rem 0;
-        display: flex;
-        flex-direction: column;
+    .iconsContainer {
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
         
-    }
-    .socialIcons{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .formSection{
-        width: 100%;
-        margin: auto;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .nameSection, .contacto{
-        gap: 30px;
-        display: flex;
-        justify-content: center;
-    }
-    .feedback{
-        display: flex;
-        margin: auto;
-        textArea{
-            width: 400px;
-            height: 100px;
+        p {
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
         }
     }
-    label{
+
+    .socialIcons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateX(10px);
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    }
+
+    /* Sección del formulario */
+    .formSection {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    .nameSection, 
+    .contacto {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    label {
         display: flex;
         flex-direction: column;
-        font-weight: 700;
-        font-size: 1.2rem;
-        padding: 10px 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+        gap: 0.5rem;
+        flex: 1;
     }
-    input{
-        width: 300px;
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        background-color: rgb(254, 249, 195);
+        color: rgb(133, 77, 14);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: rgb(160, 100, 0);
+            box-shadow: 0 0 0 2px rgba(160, 100, 0, 0.2);
+        }
+
+        &::placeholder {
+            color: rgba(133, 77, 14, 0.6);
+        }
+    }
+
+    .feedback {
+        margin: 1.5rem 0;
+        width: 100%;
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 0;
+    }
+
+    button {
+        padding: 0.75rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(254, 249, 195);
+        color: rgb(133, 77, 14);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            background-color: rgb(160, 100, 0);
+            color: rgb(254, 249, 195);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
         padding: 1rem;
+
+        input {
+            width: 100%;
+        }
+
+        .feedback textarea {
+            width: 100%;
+        }
     }
 `
