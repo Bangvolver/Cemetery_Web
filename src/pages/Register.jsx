@@ -66,7 +66,6 @@ function Register() {
     setIsLoading(true)
 
     try {
-      // Simular lógica de validación
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
       if (formData.password !== formData.confirmPassword) {
@@ -74,7 +73,6 @@ function Register() {
       }
 
       alert('Registro exitoso. ¡Bienvenido a la plataforma!')
-      // Aquí redirigirías a una página de bienvenida o dashboard
     } catch (error) {
       alert(`Error en el registro: ${error.message}`)
     } finally {
